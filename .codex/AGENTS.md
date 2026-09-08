@@ -58,6 +58,7 @@
 - Lead with affirmative scope; minimize negative framing.
 - Code should be self-documenting; implementation docs live in code rather than markdown sidecars.
 - Docs should only reflect current behaviour/contracts; git diff is the place for historical context.
+- Make sure each word justifies its existence.
 - When writing on my behalf => British English; minimise/drop filler sentences; clear, succinct and to the point.
 
 ## Philosophy
