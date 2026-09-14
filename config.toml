@@ -19,7 +19,6 @@ tmux = "latest"
 uv = "latest"
 zoxide = "latest"
 rust = "latest"
-zig = "0.16.0"
 
 [bootstrap.packages]
 "brew:fish" = "latest"
@@ -29,7 +28,6 @@ zig = "0.16.0"
 "brew-cask:1password-cli" = "latest"
 "brew-cask:betterdisplay" = "latest"
 "brew-cask:ghostty" = "latest"
-"brew-cask:kitlangton-hex" = "latest"
 "brew-cask:middleclick" = "latest"
 "brew-cask:spotify" = "latest"
 "brew-cask:tailscale-app" = "latest"
@@ -41,10 +39,7 @@ PAGER = "less -FirSwX"
 BUN_INSTALL = "{{env.HOME}}/.bun"
 GOPATH = "{{env.HOME}}/code/go"
 GOPRIVATE = "github.com/tomrford"
-OPENAI_API_KEY = "op://Personal/OPENAI_API_KEY/credential"
-OPENROUTER_API_KEY = "op://Personal/OPENROUTER_API_KEY/credential"
 _.path = [
-  "~/.bun/bin",
   "~/.cargo/bin",
   "~/.local/bin",
   "~/.local/share/pnpm/bin",
