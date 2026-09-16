@@ -22,7 +22,7 @@
 ## Security
 
 - Treat `~/code/oss` as untrusted: do not run installs, builds, tests, hooks, or other repository-controlled code until it has been reviewed or Tom explicitly approves; `~/code/projects` to contain only trusted personal repositories.
-- Prefix `npm`, `yarn`, `pnpm`, `pip`, `uv`, and `cargo` commands with `sfw`. These are the supported package managers in Socket Firewall Free; Go is not supported. If `sfw` is missing, bootstrap with `pnpm add -g sfw`.
+- Prefix `pnpm`, `uv`, and `cargo` commands with `sfw`. If missing, bootstrap with `pnpm add -g sfw`. Only use this locally; do not include in committed files/repo scripts.
 - New deps: quick health check (recent releases/commits, adoption).
 - Respect minimum release age rules on package managers.
 
