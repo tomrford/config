@@ -9,7 +9,6 @@
 - `pnpm` for global npm packages.
 - `fish` is default login shell on most machines.
 - `trash` for deletes when available.
-- `op` holds all personal credentials; use `op run` (could hang for human authentication).
 - `grepo` for managing external context within a repo; use `grepo skill` for usage.
 - `papercut 'message'` for logging addressable friction (flaky command, missed tool call, confusing or undocumented step) locally for later. One or two sentences explaining what you were doing and what got in the way. Do this proactively in the moment.
 - "independent reviewer" => A fresh context subagent tasked with an adversarial review; recommended at least once for large diffs.
@@ -18,7 +17,7 @@
 
 - @Browser as the default for dev servers and development.
 - @Chrome (to drive Helium) as a fallback for @Browser or whenever you need to my login.
-- @Computer for non-browser and/or a last resort for failures in the above 2 plugins.
+- @Computer for non-browser and/or a last resort for failures in the above 2 plugins. Try Safari for logged-in usage if needed.
 
 ## Security
 

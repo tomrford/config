@@ -25,13 +25,18 @@ rust = "latest"
 "brew:git" = "latest"
 "brew:mole" = "latest"
 "brew-cask:1password" = "latest"
-"brew-cask:1password-cli" = "latest"
 "brew-cask:betterdisplay" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:middleclick" = "latest"
 "brew-cask:spotify" = "latest"
 "brew-cask:tailscale-app" = "latest"
 "brew-cask:visual-studio-code" = "latest"
+
+[bootstrap.hooks.final]
+run = [
+  "mise bootstrap packages prune --manager brew --yes",
+  "mise bootstrap packages prune --manager brew-cask --yes",
+]
 
 [env]
 EDITOR = "nvim"
