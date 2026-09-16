@@ -1,6 +1,13 @@
 #!/bin/sh
 set -eu
 
+case "${1-}" in
+  -h|--help)
+    printf 'usage: papercut <message>\n'
+    exit 0
+    ;;
+esac
+
 [ "$#" -gt 0 ] || {
   printf 'usage: papercut <message>\n' >&2
   exit 1
