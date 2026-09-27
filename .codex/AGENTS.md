@@ -10,15 +10,23 @@
 - `trash` for deletes when available.
 - `op` 1password CLI for personal credentials (no service account so requires human auth).
 - `grepo` for managing external context within a repo; use `grepo skill` for usage.
-- `papercut 'message'` for logging addressable friction (flaky command, missed tool call, confusing or undocumented step) locally for later. One or two sentences explaining what you were doing and what got in the way. Do this proactively in the moment.
+- `mise run papercut 'message'` for logging addressable friction (flaky command, missed tool call, confusing or undocumented step) locally for later. One or two sentences explaining what you were doing and what got in the way. Do this proactively in the moment.
 - "independent reviewer" => A fresh context subagent tasked with an adversarial review; recommended at least once for large diffs.
 
 ## Codex Specific Plugins
 
 - @GitHub for PRs/Issues and other GitHub interaction.
 - @Browser as the default for dev servers and development.
-- @Chrome (to drive Helium) as a fallback for @Browser or whenever you need to my login.
+- @Chrome drives Helium as a fallback for @Browser/for logged in access.
 - @Computer for non-browser and/or a last resort for failures in the above 2 plugins.
+
+## Locations (same structure on all machines)
+
+- 3 machines: `macbook`/`macmini`/`pifive`; access via ssh over Tailscale => use `tailscale status` for hosts/IPs.
+- Generally all software development work lives in `~/code`.
+- `~/code/projects` is my personal repos/work.
+- `~/code/oss` is for 3rd party repos either for reading/context or to fork/edit/PR.
+- `~/.config/mise` is the source repo for mise boostrap configuration and managed dotfiles. Home paths can be Mise-managed symlinks into this checkout.
 
 ## Security
 
@@ -35,20 +43,14 @@
 - No amend unless asked.
 - Merges/PR close: prefer squash.
 - Prefer repo clone via ssh.
-- keep remote in sync with local unless told otherwise (i.e. fetch and prune, push when committed).
+- keep remote in sync with local by default (i.e. fetch and prune, push when committed).
 
 ## Repo health
 
 - Delete dead files; do not leave stub modules.
-- Tests must catch plausible behavioural regressions against independently specified expectations. Do not add tests that copy implementation logic, assert their own mock setup, or merely restate constants or structure. Omit tests that add no such confidence; a new test is not required for every change.
 - Do not preserve backwards compatibility unless explicitly requested.
 - File drift over ~1000 LOC should be justified; split/refactor when appropriate and complexity doesn't suffer.
 - Delete task tracker docs/comments/TODOs rather than updating content/marking as complete.
-
-## Machines and personal configuration
-
-- `~/.config/mise` is the source repo for mise boostrap configuration and managed dotfiles. Home paths can be Mise-managed symlinks into this checkout.
-- 3 machines: `macbook`/`macmini`/`pifive`; access via ssh over Tailscale => use `tailscale status` for hosts/IPs.
 
 ## Writing guidance
 

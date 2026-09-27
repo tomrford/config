@@ -15,7 +15,6 @@ node = "24"
 pnpm = "latest"
 ripgrep = "latest"
 starship = "latest"
-tmux = "latest"
 uv = "latest"
 zoxide = "latest"
 rust = "latest"
@@ -72,7 +71,6 @@ minimum_release_age_excludes = ["github:tomrford/grepo"]
 "~/.config/tmux" = {}
 "~/.config/uv" = {}
 "~/.hushlogin" = {}
-"~/.local/bin/papercut" = {}
 "~/.zshenv" = {}
 "~/.zshrc" = {}
 

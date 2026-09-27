@@ -1,17 +1,8 @@
 #!/bin/sh
+#MISE description="Log addressable friction for later"
+#MISE dir="{{cwd}}"
+#USAGE arg "<message>" var=#true help="Friction to record"
 set -eu
-
-case "${1-}" in
-  -h|--help)
-    printf 'usage: papercut <message>\n'
-    exit 0
-    ;;
-esac
-
-[ "$#" -gt 0 ] || {
-  printf 'usage: papercut <message>\n' >&2
-  exit 1
-}
 
 log="$HOME/.agents/PAPERCUTS.md"
 mkdir -p "${log%/*}"
