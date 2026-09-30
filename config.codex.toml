@@ -1,11 +1,6 @@
 # Codex environment overrides for the shared config.toml baseline.
 [tools]
-node = "24.19.0"
-pnpm = "11.9.0"
-uv = "0.12.19"
 rust = "1.95.0"
-go = "1.25.0"
-deno = "2.9.6"
 
 [env]
 CI = "true"
@@ -25,11 +20,19 @@ RUSTUP_HOME = "/workspace/.setup/rustup"
 CARGO_BUILD_JOBS = "3"
 _.path = ["/workspace/.setup/bin", "/workspace/.setup/bin/bin", "/workspace/.setup/cargo/bin", "/workspace/.setup/tools/node_modules/.bin"]
 
-[settings]
-dotfiles.root = "/workspace/config"
-dotfiles.default_mode = "symlink"
-minimum_release_age_excludes = ["github:tomrford/grepo"]
-
 [dotfiles]
-"~/.agents/skills" = { source = "/workspace/config/.agents/skills" }
-"~/.codex/AGENTS.md" = { source = "/workspace/config/.codex/AGENTS.md" }
+"/run/codex-environment/codex-home/AGENTS.md" = { source = ".codex/AGENTS.md" }
+"/run/codex-environment/codex-home/skills" = { source = ".agents/skills" }
+"/workspace/.setup/env.sh" = { content = '''
+export MISE_ENV=codex
+export MISE_DATA_DIR=/workspace/.setup/mise
+export MISE_CACHE_DIR=/workspace/.setup/cache/mise
+export PATH=/workspace/.setup/bin:$PATH
+eval "$(/workspace/.setup/bin/mise env -s bash)"
+export PATH="$MISE_DATA_DIR/shims:$PATH"
+''' }
+"~/.bashrc/codex-env" = { line = ". /workspace/.setup/env.sh", position = "prepend" }
+"~/.profile/codex-env" = { line = ". /workspace/.setup/env.sh", position = "prepend" }
+
+[bootstrap.mise_shell_activate]
+bashrc = "activate"

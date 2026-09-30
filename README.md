@@ -20,12 +20,20 @@ To explicitly select a target, use `mise -E macos bootstrap` or `mise -E codex b
 
 ## Codex installation
 
-Run `bash /workspace/config/bootstrap-codex.sh` during environment installation or refresh. It installs the shared toolchain, activates the Codex target and links user skills and instructions into this checkout, including a separate `CODEX_HOME` when present. It preserves conflicting user files for review. Application dependencies and services remain part of the environment's installation and startup instructions, rather than this personal baseline.
+Use this whole checkout as `~/.config/mise`, just as on macOS. Codex environment installation links that directory to `/workspace/config` so repository refreshes are visible immediately, installs mise if needed, then runs:
 
-Publish the prepared environment snapshot to retain tools and symlinks. Task startup only sources `/workspace/.setup/env.sh` and starts services needed for the task; it does not rerun bootstrap. Refreshing this checkout updates linked instructions and skills. Rerun installation when tool requirements change.
+```sh
+mise trust ~/.config/mise/config.toml
+mise trust ~/.config/mise/config.codex.toml
+mise -E codex bootstrap
+```
+
+Mise manages the skill and AGENTS.md links, shell activation and the environment initialisation file that selects the Codex target. The target also links the platform's runtime instructions under `/run/codex-environment/codex-home`. Application dependencies and services remain in the environment installation and startup instructions.
+
+Publish the prepared environment snapshot to retain tools and symlinks. Task startup uses the managed shell configuration and starts only the services it needs; it does not rerun bootstrap. Refreshing the checkout updates linked instructions and skills. Rerun bootstrap when configuration requirements change.
 
 ## Tool versions
 
-Shared tools retain the existing `latest` declarations, with Node constrained to major version 24. The Codex target pins the six runtimes validated during onboarding; Rust 1.95 matches CAN Trace Viewer's flake. No mise lockfile is enabled by this change.
+Shared tools retain the existing `latest` declarations, with Node constrained to major version 24. The Codex target overrides only Rust to 1.95, matching CAN Trace Viewer's flake while Nix is unavailable. All other tools use the same declarations as macOS. No mise lockfile is enabled by this change.
 
 Use `mise upgrade` for an intentional tool refresh within the declared constraints. Review configuration changes and validate the environment before publishing a new snapshot.
