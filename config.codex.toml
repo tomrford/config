@@ -2,6 +2,7 @@
 [env]
 CI = "true"
 MISE_DATA_DIR = "/workspace/.setup/mise"
+MISE_STATE_DIR = "/workspace/.setup/state/mise"
 PNPM_HOME = "/workspace/.setup/bin"
 NODE_USE_ENV_PROXY = "1"
 GOPATH = "/workspace/.setup/gopath"
@@ -24,6 +25,7 @@ _.path = ["/workspace/.setup/bin", "/workspace/.setup/bin/bin", "/workspace/.set
 export MISE_ENV=codex
 export MISE_DATA_DIR=/workspace/.setup/mise
 export MISE_CACHE_DIR=/workspace/.setup/cache/mise
+export MISE_STATE_DIR=/workspace/.setup/state/mise
 export PATH=/workspace/.setup/bin:$PATH
 eval "$(/workspace/.setup/bin/mise env -s bash)"
 export PATH="$MISE_DATA_DIR/shims:$PATH"
