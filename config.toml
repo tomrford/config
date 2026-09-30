@@ -17,7 +17,7 @@ ripgrep = "latest"
 starship = "latest"
 uv = "latest"
 zoxide = "latest"
-rust = "latest"
+rust = "1.95.0"
 deno = "latest"
 
 [env]

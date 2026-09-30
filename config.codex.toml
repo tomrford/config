@@ -1,7 +1,4 @@
 # Codex environment overrides for the shared config.toml baseline.
-[tools]
-rust = "1.95.0"
-
 [env]
 CI = "true"
 MISE_DATA_DIR = "/workspace/.setup/mise"
