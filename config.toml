@@ -24,7 +24,11 @@ deno = "latest"
 EDITOR = "nvim"
 PAGER = "less -FirSwX"
 
+[tool_config]
+locked = true
+
 [settings]
+minimum_release_age = "3d"
 dotfiles.root = "~/.config/mise"
 dotfiles.default_mode = "symlink"
 minimum_release_age_excludes = ["github:tomrford/grepo"]
