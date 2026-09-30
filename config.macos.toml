@@ -39,7 +39,6 @@ _.path = [
 "~/.config/nvim" = {}
 "~/.config/pnpm" = {}
 "~/.config/starship.toml" = {}
-"~/.config/tmux" = {}
 "~/.config/uv" = {}
 "~/.hushlogin" = {}
 "~/.zshenv" = {}
