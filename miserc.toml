@@ -1,0 +1,3 @@
+# Select the macOS target automatically on Macs. Other hosts use the shared
+# baseline unless an explicit target (such as MISE_ENV=codex) is selected.
+env = ["{{ os() }}"]

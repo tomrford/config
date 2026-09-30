@@ -18,38 +18,11 @@ starship = "latest"
 uv = "latest"
 zoxide = "latest"
 rust = "latest"
-
-[bootstrap.packages]
-"brew:fish" = "latest"
-"brew:git" = "latest"
-"brew:mole" = "latest"
-"brew-cask:1password" = "latest"
-"brew-cask:1password-cli" = "latest"
-"brew-cask:betterdisplay" = "latest"
-"brew-cask:ghostty" = "latest"
-"brew-cask:middleclick" = "latest"
-"brew-cask:spotify" = "latest"
-"brew-cask:tailscale-app" = "latest"
-"brew-cask:visual-studio-code" = "latest"
-
-[bootstrap.hooks.final]
-run = [
-  "mise bootstrap packages prune --manager brew --yes",
-  "mise bootstrap packages prune --manager brew-cask --yes",
-]
+deno = "latest"
 
 [env]
 EDITOR = "nvim"
 PAGER = "less -FirSwX"
-BUN_INSTALL = "{{env.HOME}}/.bun"
-GOPATH = "{{env.HOME}}/code/go"
-GOPRIVATE = "github.com/tomrford"
-_.path = [
-  "~/.cargo/bin",
-  "~/.local/bin",
-  "~/.local/share/pnpm/bin",
-  "/opt/homebrew/bin",
-]
 
 [settings]
 dotfiles.root = "~/.config/mise"
@@ -59,20 +32,3 @@ minimum_release_age_excludes = ["github:tomrford/grepo"]
 [dotfiles]
 "~/.agents/skills" = {}
 "~/.codex/AGENTS.md" = {}
-"~/.config/.bunfig.toml" = {}
-"~/.config/fish/conf.d/ssh-agent.fish" = {}
-"~/.config/fish/config.fish" = {}
-"~/.config/git/allowed_signers" = {}
-"~/.config/git/config" = {}
-"~/.config/ghostty" = {}
-"~/.config/nvim" = {}
-"~/.config/pnpm" = {}
-"~/.config/starship.toml" = {}
-"~/.config/tmux" = {}
-"~/.config/uv" = {}
-"~/.hushlogin" = {}
-"~/.zshenv" = {}
-"~/.zshrc" = {}
-
-[bootstrap.user]
-login_shell = "/opt/homebrew/bin/fish"

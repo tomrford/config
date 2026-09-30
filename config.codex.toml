@@ -1,0 +1,35 @@
+# Codex environment overrides for the shared config.toml baseline.
+[tools]
+node = "24.19.0"
+pnpm = "11.9.0"
+uv = "0.12.19"
+rust = "1.95.0"
+go = "1.25.0"
+deno = "2.9.6"
+
+[env]
+CI = "true"
+MISE_DATA_DIR = "/workspace/.setup/mise"
+PNPM_HOME = "/workspace/.setup/bin"
+NODE_USE_ENV_PROXY = "1"
+GOPATH = "/workspace/.setup/gopath"
+GOCACHE = "/workspace/.setup/cache/go"
+UV_CACHE_DIR = "/workspace/.setup/cache/uv"
+DENO_DIR = "/workspace/.setup/cache/deno"
+npm_config_cache = "/workspace/.setup/cache/npm"
+PNPM_CONFIG_STORE_DIR = "/workspace/.setup/pnpm-store"
+XDG_DATA_HOME = "/workspace/.setup/data"
+XDG_CACHE_HOME = "/workspace/.setup/cache"
+CARGO_HOME = "/workspace/.setup/cargo"
+RUSTUP_HOME = "/workspace/.setup/rustup"
+CARGO_BUILD_JOBS = "3"
+_.path = ["/workspace/.setup/bin", "/workspace/.setup/bin/bin", "/workspace/.setup/cargo/bin", "/workspace/.setup/tools/node_modules/.bin"]
+
+[settings]
+dotfiles.root = "/workspace/config"
+dotfiles.default_mode = "symlink"
+minimum_release_age_excludes = ["github:tomrford/grepo"]
+
+[dotfiles]
+"~/.agents/skills" = { source = "/workspace/config/.agents/skills" }
+"~/.codex/AGENTS.md" = { source = "/workspace/config/.codex/AGENTS.md" }
