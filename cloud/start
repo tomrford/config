@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+config_repo=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+case "${1:-}" in
+  '')
+    if ! git -C "$config_repo" diff --quiet || ! git -C "$config_repo" diff --cached --quiet; then
+      echo 'Config has tracked local changes; commit or stash them before refreshing.' >&2
+      exit 1
+    fi
+    git -C "$config_repo" pull --ff-only
+    ;;
+  --apply-only) ;;
+  *) echo 'Usage: cloud/start [--apply-only]' >&2; exit 2 ;;
+esac
+
+mise_bin=/workspace/.local/bin/mise
+if [[ ! -x "$mise_bin" ]]; then
+  installer=$(mktemp)
+  trap 'unlink "$installer"' EXIT
+  curl -fsSL https://mise.jdx.dev/install.sh -o "$installer"
+  MISE_INSTALL_PATH="$mise_bin" MISE_SELF_UPDATE_MINIMUM_RELEASE_AGE=3d sh "$installer"
+fi
+
+# Generate the cloud profile from the shared config on every refresh.
+# Homebrew, account changes, signing keys and desktop dotfiles stay on the Macs.
+python3 - "$config_repo" <<'PY'
+import json
+import pathlib
+import sys
+import tomllib
+
+repo = pathlib.Path(sys.argv[1])
+source = tomllib.loads((repo / 'config.toml').read_text())
+quote = json.dumps
+lines = ['[tools]']
+lines += [f'{quote(name)} = {quote(version)}' for name, version in source['tools'].items()]
+lines += ['', '[env]']
+cloud_env = {name: value for name, value in source['env'].items() if name != '_'}
+cloud_env['NODE_USE_ENV_PROXY'] = '1'
+lines += [f'{quote(name)} = {quote(value)}' for name, value in cloud_env.items()]
+lines += ['_.path = ["/workspace/.local/bin", "~/.local/bin", "~/.cargo/bin", "~/.local/share/pnpm/bin"]']
+lines += ['', '[settings]', f'dotfiles.root = {quote(str(repo))}', 'dotfiles.default_mode = "symlink"',
+          'minimum_release_age = "3d"', 'minimum_release_age_excludes = ["github:tomrford/grepo"]']
+lines += ['', '[dotfiles]']
+for target in ('~/.agents/skills', '~/.codex/AGENTS.md', '~/.config/.bunfig.toml',
+               '~/.config/nvim', '~/.config/pnpm', '~/.config/starship.toml', '~/.config/uv'):
+    if target in source['dotfiles']:
+        lines.append(f'{quote(target)} = {{}}')
+lines += ['', '[tasks.papercut]', f'file = {quote(str(repo / "tasks/papercut"))}']
+destination = pathlib.Path.home() / '.config/mise/config.toml'
+destination.parent.mkdir(parents=True, exist_ok=True)
+destination.write_text('\n'.join(lines) + '\n')
+PY
+
+"$mise_bin" trust "$HOME/.config/mise/config.toml"
+"$mise_bin" bootstrap --only dotfiles,tools --yes
+"$mise_bin" reshim
+
+# Keep platform credential setup and the inherited shell configuration intact.
+python3 - <<'PY'
+import pathlib
+profile = pathlib.Path.home() / '.profile'
+line = 'export PATH="/workspace/.local/bin:$HOME/.local/share/mise/shims:$HOME/.local/share/pnpm/bin:$PATH"'
+content = profile.read_text() if profile.exists() else ''
+content = content.replace('export PATH="/workspace/.local/bin:$HOME/.local/share/mise/shims:$PATH"\n', '')
+if line not in content.splitlines():
+    profile.write_text(content.rstrip() + '\n\n' + line + '\n')
+PY
+
+echo 'Cloud config applied. Read ~/.codex/AGENTS.md before continuing.'
