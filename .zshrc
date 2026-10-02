@@ -3,6 +3,12 @@ if [[ -x "$HOME/.local/bin/mise" ]]; then
 fi
 
 if [[ -o interactive ]]; then
+  bindkey -e
+  autoload -Uz compinit
+  compinit
+  zstyle ':completion:*' menu select
+  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
   if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init zsh)"
   fi
@@ -32,5 +38,13 @@ if [[ -o interactive ]]; then
 
   if command -v atuin >/dev/null 2>&1; then
     eval "$(atuin init zsh)"
+  fi
+  if [[ -r /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  fi
+
+  if [[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   fi
 fi

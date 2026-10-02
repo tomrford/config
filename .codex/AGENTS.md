@@ -6,7 +6,6 @@
 - `nix` is often used for toolchains => `nix develop -c` to run commands.
 - `uv` for all Python => `uv run`, `uv venv`, `uv format`.
 - `pnpm` for global npm packages.
-- `fish` is default login shell on most machines, including when SSHing between machines.
 - `trash` for deletes when available.
 - `op` 1password CLI for personal credentials (no service account so requires human auth).
 - `grepo` for managing external context within a repo; use `grepo skill` for usage.
