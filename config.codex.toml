@@ -19,8 +19,6 @@ CARGO_BUILD_JOBS = "3"
 _.path = ["/workspace/.setup/bin", "/workspace/.setup/bin/bin", "/workspace/.setup/cargo/bin", "/workspace/.setup/tools/node_modules/.bin"]
 
 [dotfiles]
-"/run/codex-environment/codex-home/AGENTS.md" = { source = ".codex/AGENTS.md" }
-"/run/codex-environment/codex-home/skills" = { source = ".agents/skills" }
 "/workspace/.setup/env.sh" = { content = '''
 export MISE_ENV=codex
 export MISE_DATA_DIR=/workspace/.setup/mise
