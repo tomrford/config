@@ -31,6 +31,7 @@ _.path = [
 ]
 
 [dotfiles]
+"~/.codex/AGENTS.md" = {}
 "~/.config/.bunfig.toml" = {}
 "~/.config/git/allowed_signers" = {}
 "~/.config/git/config" = {}

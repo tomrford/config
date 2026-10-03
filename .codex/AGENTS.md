@@ -14,11 +14,11 @@
 
 ## Codex Specific Plugins
 
-- @GitHub for PRs/Issues and other GitHub interaction.
-- @Skills for a shared, hot-loading skill library that contains most of my skills.
-- @Browser as the default for dev servers and development.
-- @Chrome drives Helium as a fallback for @Browser/for logged in access.
-- @Computer for non-browser and/or a last resort for failures in the above 2 plugins.
+- `@GitHub` for PRs/Issues and other GitHub interaction.
+- `@Skills` for a shared, hot-loading skill library that contains all of my skills. Proactively check this for relevant skills.
+- `@Browser` as the default for dev servers and development.
+- `@Chrome` drives Helium as a fallback for @Browser/for logged in access.
+- `@Computer` for non-browser and/or a last resort for failures in the above 2 plugins.
 
 ## Locations (same structure on all machines)
 
