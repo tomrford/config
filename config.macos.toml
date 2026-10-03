@@ -42,6 +42,3 @@ _.path = [
 "~/.hushlogin" = {}
 "~/.zshenv" = {}
 "~/.zshrc" = {}
-
-[bootstrap.user]
-login_shell = "/bin/zsh"
