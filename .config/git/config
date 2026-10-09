@@ -9,17 +9,8 @@
 [color]
 	ui = true
 
-[commit]
-	gpgSign = true
-
 [github]
 	user = tomrford
-
-[gpg]
-	format = ssh
-
-[gpg "ssh"]
-	allowedSignersFile = ~/.config/git/allowed_signers
 
 [init]
 	defaultBranch = main
@@ -27,10 +18,6 @@
 [push]
 	autoSetupRemote = true
 
-[tag]
-	gpgSign = true
-
 [user]
 	email = t@tomrford.com
 	name = Tom Ford
-	signingKey = ~/.ssh/id_ed25519_github_signing.pub
