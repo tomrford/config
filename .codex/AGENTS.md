@@ -68,3 +68,27 @@
 - "All code is technical debt" - every line has to earn its place; strive to minimise bloat and inefficiency at every turn.
 - "Defer complexity; earn it through measurement".
 - "As much as needed, as little as possible".
+
+<!-- pstack:models:begin -->
+# pstack model configuration
+
+Operator override for the Codex harness, authorised by Tom on 2026-10-10. These native OpenAI model assignments take precedence over the installed pstack model matrix, which predates the Astra assignment. Dispatch every codex descriptor through native spawn_agent with the stated model and reasoning_effort. Do not launch external provider CLIs or substitute another model.
+
+Grok roles use codex:gpt-6.1-sol@medium. Opus and previous Sol roles use codex:gpt-6-astra@high. Panel lane order and counts are preserved, so some panels have two independent Astra lanes. All configured models share one provider. inherit-parent and auto use the current parent model and effort natively and count as one panel lane. Why and Reflect retain the parent's live MCP tools.
+
+feature, refactoring: codex:gpt-6.1-sol@medium
+bug-fix: codex:gpt-6-astra@high
+perf-issue: codex:gpt-6-astra@high
+hillclimb: codex:gpt-6-astra@high
+judgment and prose: codex:gpt-6-astra@high
+hardest tasks: codex:gpt-6-astra@high
+how explorer: codex:gpt-6.1-sol@medium
+how explainer: codex:gpt-6-astra@high
+why investigators, synthesizer: inherit-parent
+reflect tooling, judgment, divergent, synthesizer: inherit-parent
+arena runners: codex:gpt-6-astra@high, codex:gpt-6-astra@high, codex:gpt-6.1-sol@medium
+arena cross-judge pool: codex:gpt-6-astra@high, codex:gpt-6-astra@high, codex:gpt-6.1-sol@medium
+swarm workers: codex:gpt-6.1-sol@medium
+architect runners: codex:gpt-6-astra@high, codex:gpt-6-astra@high, codex:gpt-6.1-sol@medium
+interrogate reviewers: codex:gpt-6-astra@high, codex:gpt-6-astra@high, codex:gpt-6.1-sol@medium
+<!-- pstack:models:end -->
