@@ -32,13 +32,17 @@ _.path = [
 
 [dotfiles]
 "~/.codex/AGENTS.md" = {}
-"~/.config/.bunfig.toml" = {}
-"~/.config/git/config" = {}
+"~/.bunfig.toml" = { mode = "track" }
+"~/.config/git/config" = { mode = "track" }
 "~/.config/ghostty" = {}
 "~/.config/nvim" = {}
-"~/.config/pnpm" = {}
+"~/.config/pnpm/config.yaml" = { mode = "track" }
+"~/Library/Preferences/pnpm/config.yaml" = { source = "~/.config/pnpm/config.yaml", mode = "symlink" }
 "~/.config/starship.toml" = {}
-"~/.config/uv" = {}
+"~/.config/uv/uv.toml" = { mode = "track" }
 "~/.hushlogin" = {}
-"~/.zshenv" = {}
-"~/.zshrc" = {}
+"~/.zshenv" = { mode = "track" }
+"~/.zshrc" = { mode = "track" }
+
+[bootstrap.services.mise-history]
+builtin = "history-watch"

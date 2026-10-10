@@ -28,6 +28,7 @@ PAGER = "less -FirSwX"
 locked = true
 
 [settings]
+self_update.auto = "1d"
 minimum_release_age = "3d"
 dotfiles.root = "~/.config/mise"
 dotfiles.default_mode = "symlink"

@@ -19,6 +19,9 @@ CARGO_BUILD_JOBS = "3"
 _.path = ["/workspace/.setup/bin", "/workspace/.setup/bin/bin", "/workspace/.setup/cargo/bin", "/workspace/.setup/tools/node_modules/.bin"]
 
 [dotfiles]
+"~/.config/pnpm/config.yaml" = { source = "/workspace/.setup/dotfiles/home/.config/pnpm/config.yaml", mode = "copy" }
+"~/.config/uv/uv.toml" = { source = "/workspace/.setup/dotfiles/home/.config/uv/uv.toml", mode = "copy" }
+"~/.bunfig.toml" = { source = "/workspace/.setup/dotfiles/home/.bunfig.toml", mode = "copy" }
 "/workspace/.setup/env.sh" = { content = '''
 export MISE_ENV=codex
 export MISE_DATA_DIR=/workspace/.setup/mise
@@ -33,3 +36,9 @@ export PATH="$MISE_DATA_DIR/shims:$PATH"
 
 [bootstrap.mise_shell_activate]
 bashrc = "activate"
+
+[bootstrap.repos]
+"/workspace/.setup/dotfiles" = { url = "https://github.com/tomrford/dotfiles.git", ref = "main" }
+
+[bootstrap.hooks.pre-dotfiles]
+run = "mise bootstrap repos update /workspace/.setup/dotfiles"
