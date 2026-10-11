@@ -1,6 +1,6 @@
 # Tom's agent instructions
 
-## Tools and Workflows
+## Tools
 
 - `mise` is used for most tools and global toolchains as well as dotfile and config management.
 - `nix` is often used for toolchains => `nix develop -c` to run commands.
@@ -10,12 +10,11 @@
 - `op` 1password CLI for personal credentials (no service account so requires human auth).
 - `grepo` for managing external context within a repo; use `grepo skill` for usage.
 - `mise run papercut 'message'` for logging addressable friction (flaky command, missed tool call, confusing or undocumented step) locally for later. One or two sentences explaining what you were doing and what got in the way. Do this proactively in the moment.
-- "independent reviewer" => A fresh context subagent tasked with an adversarial review; recommended at least once for large diffs.
 
 ## Codex Specific Plugins
 
-- `@GitHub` for PRs/Issues and other GitHub interaction.
-- `@Skills` for a shared, hot-loading skill library that contains all of my skills. Proactively check this for relevant skills.
+- `@tstack` for workflows for any significant piece of work.
+- `@GitHub` for PRs/issues and other GitHub interaction.
 - `@Browser` as the default for dev servers and development.
 - `@Chrome` drives Helium as a fallback for @Browser/for logged in access.
 - `@Computer` for non-browser and/or a last resort for failures in the above 2 plugins.
@@ -37,10 +36,7 @@
 
 ## VCS
 
-- `checkout` ok for PR review / explicit request.
-- Destructive ops forbidden unless explicit (`reset --hard`, `clean`, `restore`, `rm`, ...).
 - Commit messages: Scoped over Conventional.
-- No amend unless asked.
 - Merges/PR close: prefer squash.
 - Prefer repo clone via ssh.
 - keep remote in sync with local by default (i.e. fetch and prune, push when committed).
@@ -50,7 +46,6 @@
 - Delete dead files; do not leave stub modules.
 - Do not preserve backwards compatibility unless explicitly requested.
 - File drift over ~1000 LOC should be justified; split/refactor when appropriate and complexity doesn't suffer.
-- Delete task tracker docs/comments/TODOs rather than updating content/marking as complete.
 
 ## Writing guidance
 
@@ -63,8 +58,3 @@
 - Make sure each word justifies its existence.
 - When writing on my behalf => British English; minimise/drop filler sentences; clear, succinct and to the point.
 
-## Philosophy
-
-- "All code is technical debt" - every line has to earn its place; strive to minimise bloat and inefficiency at every turn.
-- "Defer complexity; earn it through measurement".
-- "As much as needed, as little as possible".
