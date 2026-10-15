@@ -2,7 +2,6 @@
 
 ## Protocols
 
-- proactively use the `@tstack` plugin and its workflows for anything beyond trivial tasks.
 - New deps: quick health check (recent releases/commits, adoption).
 - Respect minimum release age rules on package managers (typically 3 days).
 - Commit messages: Scoped over Conventional.
@@ -19,7 +18,7 @@
 - `uv` for all Python.
 - `pnpm` for global npm packages.
 - `grepo` for managing external context within a repo; use `grepo skill` for usage.
-- `@GitHub` for PRs/issues and other GitHub interaction (no gh cli auth).
+- `@GitHub` and/or `gh` for PRs/issues and other GitHub interaction.
 
 ## Locations (same structure on all machines)
 
