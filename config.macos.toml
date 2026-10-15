@@ -32,6 +32,7 @@ _.path = [
 
 [dotfiles]
 "~/.codex/AGENTS.md" = {}
+"~/.claude/CLAUDE.md" = { source = ".codex/AGENTS.md" }
 "~/.bunfig.toml" = { mode = "track" }
 "~/.config/git/config" = { mode = "track" }
 "~/.config/ghostty" = {}
