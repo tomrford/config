@@ -17,7 +17,7 @@ ripgrep = "latest"
 starship = "latest"
 uv = "latest"
 zoxide = "latest"
-rust = "1.99.0"
+rust = { version = "1.99.0", components = ["rust-analyzer", "rust-src"] }
 deno = "latest"
 
 [env]

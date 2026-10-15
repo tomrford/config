@@ -879,6 +879,9 @@ version = "1.99.0"
 backend = "core:rust"
 specifiers = ["1.99.0"]
 
+[tools.rust.options]
+components = "rust-analyzer,rust-src"
+
 [[tools.starship]]
 version = "1.26.0"
 backend = "aqua:starship/starship"
