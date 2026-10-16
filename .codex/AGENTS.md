@@ -17,7 +17,6 @@
 - `nix` for some projects or one-off tooling requirements.
 - `uv` for all Python.
 - `pnpm` for global npm packages.
-- `grepo` for managing external context within a repo; use `grepo skill` for usage.
 - `@GitHub` and/or `gh` for PRs/issues and other GitHub interaction.
 
 ## Locations (same structure on all machines)

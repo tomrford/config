@@ -1,6 +1,5 @@
 [tools]
 "aqua:neovim/neovim" = "latest"
-"github:tomrford/grepo" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 atuin = "latest"
 bat = "latest"
@@ -32,4 +31,3 @@ self_update.auto = "1d"
 minimum_release_age = "3d"
 dotfiles.root = "~/.config/mise"
 dotfiles.default_mode = "symlink"
-minimum_release_age_excludes = ["github:tomrford/grepo"]

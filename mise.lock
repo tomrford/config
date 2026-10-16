@@ -530,56 +530,6 @@ url = "https://github.com/cli/cli/releases/download/v2.101.0/gh_2.101.0_windows_
 url_api = "https://api.github.com/repos/cli/cli/releases/assets/565857681"
 provenance = "github-attestations"
 
-[[tools."github:tomrford/grepo"]]
-version = "0.2.0"
-backend = "github:tomrford/grepo"
-specifiers = ["latest"]
-
-[tools."github:tomrford/grepo"."platforms.linux-arm64"]
-checksum = "sha256:b7f0aaaba81142308cd3477753d839878b9e83143f859490cc0275a629de7bd4"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721721"
-
-[tools."github:tomrford/grepo"."platforms.linux-arm64-musl"]
-checksum = "sha256:b7f0aaaba81142308cd3477753d839878b9e83143f859490cc0275a629de7bd4"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721721"
-
-[tools."github:tomrford/grepo"."platforms.linux-x64"]
-checksum = "sha256:31dfff8ac7a3870a599a5d1880179e8315e4a1cc374979dc7eea6f01f15cc36a"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721730"
-
-[tools."github:tomrford/grepo"."platforms.linux-x64-baseline"]
-checksum = "sha256:31dfff8ac7a3870a599a5d1880179e8315e4a1cc374979dc7eea6f01f15cc36a"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721730"
-
-[tools."github:tomrford/grepo"."platforms.linux-x64-musl"]
-checksum = "sha256:31dfff8ac7a3870a599a5d1880179e8315e4a1cc374979dc7eea6f01f15cc36a"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721730"
-
-[tools."github:tomrford/grepo"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:31dfff8ac7a3870a599a5d1880179e8315e4a1cc374979dc7eea6f01f15cc36a"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721730"
-
-[tools."github:tomrford/grepo"."platforms.macos-arm64"]
-checksum = "sha256:97220a421882fd18493c0bf88e3f5f7def487ed5bdff307b16e075c7842ae853"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721719"
-
-[tools."github:tomrford/grepo"."platforms.macos-x64"]
-checksum = "sha256:ed1a27151f5297bf8979e37c15da7799ea284e1a4a3dd8069fb7b6091c2b5f8c"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721716"
-
-[tools."github:tomrford/grepo"."platforms.macos-x64-baseline"]
-checksum = "sha256:ed1a27151f5297bf8979e37c15da7799ea284e1a4a3dd8069fb7b6091c2b5f8c"
-url = "https://github.com/tomrford/grepo/releases/download/v0.2.0/grepo-v0.2.0-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/tomrford/grepo/releases/assets/539721716"
-
 [[tools.go]]
 version = "1.27.1"
 backend = "core:go"
