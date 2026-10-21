@@ -10,13 +10,13 @@ fzf = "latest"
 gh = "latest"
 go = "latest"
 lazygit = "latest"
-node = "24"
+node = "latest"
 pnpm = "latest"
 ripgrep = "latest"
 starship = "latest"
 uv = "latest"
 zoxide = "latest"
-rust = { version = "1.99.0", components = ["rust-analyzer", "rust-src"] }
+rust = { version = "1.99.1", components = ["rust-analyzer", "rust-src"] }
 deno = "latest"
 
 [env]
