@@ -22,5 +22,5 @@
 ## Security
 
 - Treat `~/code/oss` as untrusted: do not run installs, builds, tests, hooks, or other repository-controlled code until it has been reviewed or Tom explicitly approves; `~/code/projects` to contain only trusted personal repositories.
-- On local machines, prefix `pnpm`, `uv`, and `cargo` commands with `sfw`. If missing, bootstrap with `pnpm add -g sfw`. Do not include these prefixes in committed files/repo scripts. In Codex cloud environments, use the platform egress proxy directly; `sfw` cannot route downloads through it.
+- Prefix `pnpm`, `uv`, and `cargo` commands with `sfw`. If missing, bootstrap with `pnpm add -g sfw`. Do not include this in committed files/repo scripts and do not leak this into repo documentation; this is a personal choice only for commands on my machines.
 
