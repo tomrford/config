@@ -2,14 +2,16 @@
 
 ## Protocols
 
+- `@tstack` is my personal skills plugin; use where applicable.
 - New deps: quick health check (recent releases/commits, adoption).
-- Respect minimum release age rules on package managers (typically 3 days).
+- Always respect minimum release age rules on package managers.
 
 ## Tools
 
 - `mise` for most tools and global toolchains as well as dotfiles and config management.
 - `uv` for all Python.
 - `pnpm` for global npm packages.
+- `git` for all VCS.
 - `@GitHub` for PRs/issues and other GitHub interaction.
 
 ## Locations (same structure on all machines)
