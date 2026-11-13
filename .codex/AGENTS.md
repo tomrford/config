@@ -17,7 +17,7 @@
 
 ## Locations (same structure on all machines)
 
-- 2 machines: `macbook`/`macmini`; access via ssh over Tailscale.
+- 3 machines: `macbook`/`macmini`/`pifive`; access via ssh over Tailscale.
 - `~/code/projects` is my personal repos/work.
 - `~/code/oss` is for 3rd party repos either for reading/context or to fork/edit/PR.
 - `~/.config/mise` is the source repo for mise boostrap configuration and managed dotfiles. Home paths can be Mise-managed symlinks into this checkout.
