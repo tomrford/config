@@ -12,7 +12,7 @@
 - `uv` for all Python.
 - `pnpm` for global npm packages.
 - `git` for all VCS.
-- `@GitHub` for PRs/issues and other GitHub interaction.
+- `gh` for PRs/issues and other GitHub interaction.
 
 ## Locations (same structure on all machines)
 
