@@ -1,1 +1,0 @@
-[untangle-codebase](../../skills/untangle-codebase/SKILL.md) is copied verbatim from [caldoai/skills at bd73b2e](https://github.com/caldoai/skills/blob/bd73b2ea5eb854ab8f0553fb41f77c8786f28f82/skills/untangle-codebase/SKILL.md) under the [upstream MIT license](LICENSE). The local Codex metadata preserves explicit-only invocation.
