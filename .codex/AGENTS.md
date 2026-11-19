@@ -13,6 +13,7 @@
 - `bun` for JS/TS projects and global npm packages.
 - `git` for all VCS.
 - `gh` for PRs/issues and other GitHub interaction.
+- `cf` for Cloudflare API interactions and managing deployments (if missing, `bun add -g cf` and ask me to auth).
 
 ## Locations (same structure on all machines)
 
