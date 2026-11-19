@@ -1,0 +1,4 @@
+saveExact: true
+minimumReleaseAge: 4320
+verifyDepsBeforeRun: warn
+globalBinDir: "${HOME}/.local/share/pnpm/bin"
