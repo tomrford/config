@@ -35,3 +35,5 @@ dotfiles.default_mode = "symlink"
 [dotfiles]
 "~/.agents/skills" = { source = "agent-skills/skills" }
 "~/.claude/skills" = { source = "agent-skills/skills" }
+"~/.gemini/AGENTS.md" = { source = ".codex/AGENTS.md" }
+"~/.gemini/config/skills" = { source = "agent-skills/skills" }
