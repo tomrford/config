@@ -1,4 +1,4 @@
-# macOS desktop bootstrap and user configuration.
+# macOS-only desktop packages and overrides.
 [bootstrap.packages]
 "brew:zsh-autosuggestions" = "latest"
 "brew:zsh-syntax-highlighting" = "latest"
@@ -17,28 +17,5 @@ run = [
   "mise bootstrap packages prune --manager brew-cask --yes",
 ]
 
-[env]
-BUN_INSTALL = "{{env.HOME}}/.bun"
-GOPATH = "{{env.HOME}}/code/go"
-GOPRIVATE = "github.com/tomrford"
-_.path = [
-  "~/.cargo/bin",
-  "~/.local/bin",
-  "~/.local/share/pnpm/bin",
-  "/opt/homebrew/bin",
-]
-
 [dotfiles]
-"~/.codex/AGENTS.md" = {}
-"~/.claude/CLAUDE.md" = { source = ".codex/AGENTS.md" }
-"~/.bunfig.toml" = {}
-"~/.config/git/config" = {}
 "~/.config/ghostty" = {}
-"~/.config/nvim" = {}
-"~/.config/pnpm/config.yaml" = {}
-"~/Library/Preferences/pnpm/config.yaml" = { source = ".config/pnpm/config.yaml", mode = "symlink" }
-"~/.config/starship.toml" = {}
-"~/.config/uv/uv.toml" = {}
-"~/.hushlogin" = {}
-"~/.zshenv" = {}
-"~/.zshrc" = {}

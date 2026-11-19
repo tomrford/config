@@ -290,55 +290,6 @@ url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x
 checksum = "sha256:0f20ce6674d4f2dbcc8c5d59fdf99f7ba45f8c3b367e0f5781cbfa30a1c78d99"
 url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64-baseline.zip"
 
-[[tools.deno]]
-version = "2.9.8"
-backend = "core:deno"
-specifiers = ["latest"]
-
-[tools.deno."platforms.linux-arm64"]
-checksum = "sha256:2664fcd6a58a37676449e5750ef2140cd46c18f2bbc08be0e03cbcb26ca4de22"
-url = "https://dl.deno.land/release/v2.9.8/deno-aarch64-unknown-linux-gnu.zip"
-
-[tools.deno."platforms.linux-arm64-musl"]
-checksum = "sha256:2664fcd6a58a37676449e5750ef2140cd46c18f2bbc08be0e03cbcb26ca4de22"
-url = "https://dl.deno.land/release/v2.9.8/deno-aarch64-unknown-linux-gnu.zip"
-
-[tools.deno."platforms.linux-x64"]
-checksum = "sha256:a39762429792913fe762ef0b59c9cba41dbd38195984da99221a193b13d97b40"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-unknown-linux-gnu.zip"
-
-[tools.deno."platforms.linux-x64-baseline"]
-checksum = "sha256:a39762429792913fe762ef0b59c9cba41dbd38195984da99221a193b13d97b40"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-unknown-linux-gnu.zip"
-
-[tools.deno."platforms.linux-x64-musl"]
-checksum = "sha256:a39762429792913fe762ef0b59c9cba41dbd38195984da99221a193b13d97b40"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-unknown-linux-gnu.zip"
-
-[tools.deno."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:a39762429792913fe762ef0b59c9cba41dbd38195984da99221a193b13d97b40"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-unknown-linux-gnu.zip"
-
-[tools.deno."platforms.macos-arm64"]
-checksum = "sha256:5882caa6c9b7ab7adb06f23ec1894ac5bec0b1a5df1195157f75829a0d3cb651"
-url = "https://dl.deno.land/release/v2.9.8/deno-aarch64-apple-darwin.zip"
-
-[tools.deno."platforms.macos-x64"]
-checksum = "sha256:05968936d544988b3e0116c9a07204e246956f78476ae5000652f2a9e2e4d075"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-apple-darwin.zip"
-
-[tools.deno."platforms.macos-x64-baseline"]
-checksum = "sha256:05968936d544988b3e0116c9a07204e246956f78476ae5000652f2a9e2e4d075"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-apple-darwin.zip"
-
-[tools.deno."platforms.windows-x64"]
-checksum = "sha256:b0f654158ad3edaee34cf6aa8d39695f242d3b122753f6fb965261b9c7986f24"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-pc-windows-msvc.zip"
-
-[tools.deno."platforms.windows-x64-baseline"]
-checksum = "sha256:b0f654158ad3edaee34cf6aa8d39695f242d3b122753f6fb965261b9c7986f24"
-url = "https://dl.deno.land/release/v2.9.8/deno-x86_64-pc-windows-msvc.zip"
-
 [[tools.fd]]
 version = "10.5.0"
 backend = "aqua:sharkdp/fd"
@@ -692,77 +643,6 @@ url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-win-x64.zip"
 [tools.node."platforms.windows-x64-baseline"]
 checksum = "sha256:b3efd5c70cba3308ed46e7e699a9b8aac075bbc6b027fcb39c84c31acc25e2b4"
 url = "https://nodejs.org/dist/v26.12.1/node-v26.12.1-win-x64.zip"
-
-[[tools.pnpm]]
-version = "12.14.0"
-backend = "aqua:pnpm/pnpm"
-specifiers = ["latest"]
-
-[tools.pnpm."platforms.linux-arm64"]
-checksum = "sha256:cfc780b9e690549e6633e1045fb1fb6ef84e390711e2099e6ccbae91c32456ea"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957409"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.linux-arm64-musl"]
-checksum = "sha256:511a54809bdfd28270d30011d1697f582c8130d555b4fa0e2856b1a7534c98bf"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-linux-arm64-musl.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957416"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.linux-x64"]
-checksum = "sha256:3910c3852136bed5bc1511b9137a45fd4357ed6b3970d9d08893641e9005867e"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957410"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.linux-x64-baseline"]
-checksum = "sha256:3910c3852136bed5bc1511b9137a45fd4357ed6b3970d9d08893641e9005867e"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957410"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.linux-x64-musl"]
-checksum = "sha256:d7115e2f2791d79bf9e7e448609537595bb7787de1ef5292ce91ff3d1be2629e"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957412"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:d7115e2f2791d79bf9e7e448609537595bb7787de1ef5292ce91ff3d1be2629e"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957412"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.macos-arm64"]
-checksum = "sha256:50f48e0e17508952790a3fbf58fcf14f3b82efa5f594ca04ad904e29aaf854b0"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957413"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.macos-x64"]
-checksum = "sha256:2c412e07382049b4edb04fa6da78f3d4ef7810b75853c80544dcfb7c0ed79880"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957411"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.macos-x64-baseline"]
-checksum = "sha256:2c412e07382049b4edb04fa6da78f3d4ef7810b75853c80544dcfb7c0ed79880"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957411"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.windows-x64"]
-checksum = "sha256:6f0f38e917c8ce76ef31db528c357e2bfa354a1bcb16464e3cdec39e6530d784"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-win32-x64.zip"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957404"
-provenance = "github-attestations"
-
-[tools.pnpm."platforms.windows-x64-baseline"]
-checksum = "sha256:6f0f38e917c8ce76ef31db528c357e2bfa354a1bcb16464e3cdec39e6530d784"
-url = "https://github.com/pnpm/pnpm/releases/download/v12.14.0/pnpm-win32-x64.zip"
-url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/643957404"
-provenance = "github-attestations"
 
 [[tools.ripgrep]]
 version = "15.2.0"

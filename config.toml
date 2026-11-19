@@ -11,17 +11,24 @@ gh = "latest"
 go = "latest"
 lazygit = "latest"
 node = "latest"
-pnpm = "latest"
 ripgrep = "latest"
+rust = { version = "1.99.1", components = ["rust-analyzer", "rust-src"] }
 starship = "latest"
 uv = "latest"
 zoxide = "latest"
-rust = { version = "1.99.1", components = ["rust-analyzer", "rust-src"] }
-deno = "latest"
 
 [env]
+BUN_INSTALL = "{{env.HOME}}/.bun"
 EDITOR = "nvim"
+GOPATH = "{{env.HOME}}/code/go"
+GOPRIVATE = "github.com/tomrford"
 PAGER = "less -FirSwX"
+_.path = [
+  "~/.cargo/bin",
+  "~/.local/bin",
+  "~/.bun/bin",
+  "/opt/homebrew/bin",
+]
 
 [tool_config]
 locked = true
@@ -34,6 +41,16 @@ dotfiles.default_mode = "symlink"
 
 [dotfiles]
 "~/.agents/skills" = { source = "agent-skills/skills" }
+"~/.bunfig.toml" = {}
+"~/.claude/CLAUDE.md" = { source = ".codex/AGENTS.md" }
 "~/.claude/skills" = { source = "agent-skills/skills" }
+"~/.codex/AGENTS.md" = {}
+"~/.config/git/config" = {}
+"~/.config/nvim" = {}
+"~/.config/starship.toml" = {}
+"~/.config/uv/uv.toml" = {}
 "~/.gemini/AGENTS.md" = { source = ".codex/AGENTS.md" }
 "~/.gemini/config/skills" = { source = "agent-skills/skills" }
+"~/.hushlogin" = {}
+"~/.zshenv" = {}
+"~/.zshrc" = {}
