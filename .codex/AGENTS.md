@@ -2,7 +2,6 @@
 
 ## Protocols
 
-- `@tstack` is my personal skills plugin; use where applicable.
 - New deps: quick health check (recent releases/commits, adoption).
 - Always respect minimum release age rules on package managers and include in new projects' manifests (typically 3 days).
 
