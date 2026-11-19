@@ -10,7 +10,6 @@
 "brew-cask:middleclick" = "latest"
 "brew-cask:spotify" = "latest"
 "brew-cask:tailscale-app" = "latest"
-"brew-cask:visual-studio-code" = "latest"
 
 [bootstrap.hooks.final]
 run = [
