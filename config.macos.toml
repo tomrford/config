@@ -30,8 +30,6 @@ _.path = [
 ]
 
 [dotfiles]
-"~/.agents/skills" = { mode = "track" }
-"~/.gemini/config/skills" = { source = "~/.agents/skills", mode = "symlink" }
 "~/.codex/AGENTS.md" = {}
 "~/.claude/CLAUDE.md" = { source = ".codex/AGENTS.md" }
 "~/.bunfig.toml" = { mode = "track" }

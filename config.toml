@@ -31,3 +31,7 @@ self_update.auto = "1d"
 minimum_release_age = "3d"
 dotfiles.root = "~/.config/mise"
 dotfiles.default_mode = "symlink"
+
+[dotfiles]
+"~/.agents/skills" = { source = "agent-skills/skills" }
+"~/.claude/skills" = { source = "agent-skills/skills" }
