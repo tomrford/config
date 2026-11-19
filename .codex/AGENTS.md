@@ -21,3 +21,7 @@
 - `~/code/projects` is my personal repos/work.
 - `~/.config/mise` is the source repo for mise boostrap configuration and managed dotfiles. Home paths can be Mise-managed symlinks into this checkout.
 
+## Gemini
+
+- Keep shell commands within `run_command`'s 10s sync limit (split long build/test pipelines); if a command auto-backgrounds under T3 Code ACP, do not emit a progress reply and end the turn while waiting for it.
+

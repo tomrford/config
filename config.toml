@@ -52,5 +52,9 @@ dotfiles.default_mode = "symlink"
 "~/.gemini/AGENTS.md" = { source = ".codex/AGENTS.md" }
 "~/.gemini/config/skills" = { source = "agent-skills/skills" }
 "~/.hushlogin" = {}
+# T3 Code runs Antigravity with an isolated --gemini-dir under
+# ~/.t3/userdata/providers/antigravity/<sha256(instanceId)>/ (only skills are auto-linked;
+# ac0a3dfd... = sha256("antigravity")). Note: config/mcp_config.json is still per-machine.
+"~/.t3/userdata/providers/antigravity/ac0a3dfd6dddb20962cecff6ee5fe65e19d3923be20e52c5ab52ff877f7e4c32/AGENTS.md" = { source = ".codex/AGENTS.md" }
 "~/.zshenv" = {}
 "~/.zshrc" = {}
