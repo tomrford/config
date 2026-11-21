@@ -4,6 +4,7 @@
 
 - New deps: quick health check (recent releases/commits, adoption).
 - Always respect minimum release age rules on package managers and include in new projects' manifests (typically 3 days).
+- Prefer ssh for git clones.
 
 ## Tools
 
