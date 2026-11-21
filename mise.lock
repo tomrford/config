@@ -481,6 +481,65 @@ url = "https://github.com/cli/cli/releases/download/v2.102.0/gh_2.102.0_windows_
 url_api = "https://api.github.com/repos/cli/cli/releases/assets/599854760"
 provenance = "github-attestations"
 
+[[tools."github:tomrford/tasks"]]
+version = "0.1.0"
+backend = "github:tomrford/tasks"
+specifiers = ["latest"]
+
+[tools."github:tomrford/tasks"."platforms.linux-arm64"]
+checksum = "sha256:a354c397597df4d2038de52a0ba6357d49be4ff0386f6a17ab51c15515633cf4"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775933984"
+
+[tools."github:tomrford/tasks"."platforms.linux-arm64-musl"]
+checksum = "sha256:a354c397597df4d2038de52a0ba6357d49be4ff0386f6a17ab51c15515633cf4"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775933984"
+
+[tools."github:tomrford/tasks"."platforms.linux-x64"]
+checksum = "sha256:38442a9be43589b5e49b1e158864f6785f8984e8edfe23cd9ec9d4903eb8df4f"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775934003"
+
+[tools."github:tomrford/tasks"."platforms.linux-x64-baseline"]
+checksum = "sha256:38442a9be43589b5e49b1e158864f6785f8984e8edfe23cd9ec9d4903eb8df4f"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775934003"
+
+[tools."github:tomrford/tasks"."platforms.linux-x64-musl"]
+checksum = "sha256:38442a9be43589b5e49b1e158864f6785f8984e8edfe23cd9ec9d4903eb8df4f"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775934003"
+
+[tools."github:tomrford/tasks"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:38442a9be43589b5e49b1e158864f6785f8984e8edfe23cd9ec9d4903eb8df4f"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775934003"
+
+[tools."github:tomrford/tasks"."platforms.macos-arm64"]
+checksum = "sha256:8ee6fbf53811678171baeb2a146c1903455f5300cd5fee7d804fd007269c693e"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775933985"
+
+[tools."github:tomrford/tasks"."platforms.macos-x64"]
+checksum = "sha256:42d49992b240057104f051ef095c15a6f130f6570330a3e4e31d7ce5785d1c04"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775933994"
+
+[tools."github:tomrford/tasks"."platforms.macos-x64-baseline"]
+checksum = "sha256:42d49992b240057104f051ef095c15a6f130f6570330a3e4e31d7ce5785d1c04"
+checksum_source = "mise-versions"
+url = "https://github.com/tomrford/tasks/releases/download/v0.1.0/tasks_v0.1.0_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/tomrford/tasks/releases/assets/775933994"
+
 [[tools.go]]
 version = "1.27.3"
 backend = "core:go"

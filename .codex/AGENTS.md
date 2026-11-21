@@ -9,12 +9,13 @@
 ## Tools
 
 - `mise` for most tools and global toolchains as well as dotfiles and config management.
-- `nix` for some projects' toolchains.
+- `nix` for some projects' toolchains and niche/one-off tooling/repos.
 - `uv` for all Python.
 - `bun` for JS/TS projects and global npm packages.
 - `git` for all VCS.
 - `gh` for PRs/issues and other GitHub interaction.
 - `cf` for Cloudflare API interactions and managing deployments (if missing, `bun add -g cf` and ask me to auth).
+- `tasks` for cross-machine agent coordination; use when I give you a funny room string (e.g. `amber-falcon-drift-...`) and ask you to coordinate with another agent — run `tasks skill` to bootstrap (if missing, `mise use -g github:tomrford/tasks` and ask me to login).
 
 ## Locations (same structure on all machines)
 
